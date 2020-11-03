@@ -2,12 +2,11 @@
 <html>
 
 <head>
-    <title>Homework</title>
+    <title>Guppy OSK</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="../../../build/guppy-default-osk.min.css">
-    <script type="text/javascript" src="../../../build/guppy_osk.js"></script>
-    <script type="text/javascript" src="../../../build/guppy.js"></script>
-    <script type="text/javascript" src="https://guppy.js.org/lib/math-expressions/math-expressions.js"></script>
+    <link rel="stylesheet" href="https://guppy.js.org/build/guppy-default-osk.min.css">
+    <script type="text/javascript" src="https://guppy.js.org/build/guppy_osk.js"></script>
+    <script type="text/javascript" src="https://guppy.js.org/build/guppy.js"></script>
     <script type="text/javascript">
      answers = {"ans1":"1", "ans2":"x^2", "ans3":"( 4+ sqrt( 16 - 4 ) )/( 2 )"};
      blank = "\\color{gray}{\\text{Click here to start typing your answer}}";
@@ -27,7 +26,6 @@
      }
      window.onload = function(){
      Guppy.use_osk(new GuppyOSK({"goto_tab":"arithmetic","attach":"focus"}));
-         Guppy.configure("empty_content",blank);
 	 Guppy.event("done",function(e){check_answer(e.target.editor.id)});
 	 Guppy.Doc.render_all("text","$$");
 	 var g1 = new Guppy("ans1");
