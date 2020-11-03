@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Guppy OSK</title>
+    <title>KWISER Demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://guppy.js.org/build/guppy-default-osk.min.css">
     <script type="text/javascript" src="https://guppy.js.org/build/guppy_osk.js"></script>
@@ -26,7 +26,7 @@
 	 }
      }
      window.onload = function(){
-     Guppy.use_osk(new GuppyOSK({"goto_tab":"arithmetic"}));//,"attach":"focus"
+     Guppy.use_osk(new GuppyOSK({"goto_tab":"arithmetic","attach":"focus"}));//
 	 Guppy.event("done",function(e){check_answer(e.target.editor.id)});
 	 Guppy.Doc.render_all("text","$$");
 	 var g1 = new Guppy("ans1");
@@ -61,7 +61,7 @@
 </head>
 
 <body>
-    <div  style="overflow-y:scroll; height:33%;">
+    <div  style="overflow-y:auto; height:33%;">
     <ul>
 	<li>
 	    Express $$((sin(x)^2) + (cos(x)^2))$$ without using any trigonometric functions.<br />
