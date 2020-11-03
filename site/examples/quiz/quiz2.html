@@ -26,7 +26,7 @@
 	 }
      }
      window.onload = function(){
-     Guppy.use_osk(new GuppyOSK({"goto_tab":"arithmetic","attach":"focus"}));
+     Guppy.use_osk(new GuppyOSK({"goto_tab":"arithmetic"}));//,"attach":"focus"
 	 Guppy.event("done",function(e){check_answer(e.target.editor.id)});
 	 Guppy.Doc.render_all("text","$$");
 	 var g1 = new Guppy("ans1");
