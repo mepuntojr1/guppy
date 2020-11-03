@@ -11,7 +11,6 @@
     <script type="text/javascript">
      answers = {"ans1":"1", "ans2":"x^2", "ans3":"( 4+ sqrt( 16 - 4 ) )/( 2 )"};
      questions = {"q1":"Express $$((sin(x)^2) + (cos(x)^2))$$ without using any trigonometric functions."};
-     document.getElementById("q1").innerHTML = "Express $$((sin(x)^2) + (cos(x)^2))$$ without using any trigonometric functions.";
      blank = "\\color{gray}{\\text{Click here to start typing your answer}}";
      check_answer = function(id){
 	 attempt = Guppy(id).asciimath();
@@ -30,6 +29,9 @@
      window.onload = function(){
      Guppy.use_osk(new GuppyOSK({"goto_tab":"arithmetic","attach":"focus"}));//
 	 Guppy.event("done",function(e){check_answer(e.target.editor.id)});
+	     
+	 document.getElementById("q1").innerHTML = "Express $$((sin(x)^2) + (cos(x)^2))$$ without using any trigonometric functions.";
+	     
 	 Guppy.Doc.render_all("text","$$");
 	 var g1 = new Guppy("ans1");
 	 g1.configure("blacklist",["sin","cos","sec","tan","cot","csc"]);
