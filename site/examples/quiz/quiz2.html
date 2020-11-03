@@ -27,7 +27,7 @@
 	 }
      }
      window.onload = function(){
-     Guppy.use_osk(new GuppyOSK({"goto_tab":"arithmetic","attach":"focus"}));//
+     Guppy.use_osk(new GuppyOSK());//{"goto_tab":"arithmetic","attach":"focus"}
 	 Guppy.event("done",function(e){check_answer(e.target.editor.id)});
 	     
 	 document.getElementById(1).innerHTML = questions[1];
