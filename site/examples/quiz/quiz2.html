@@ -10,7 +10,7 @@
     <script type="text/javascript" src="https://guppy.js.org/lib/math-expressions/math-expressions.js"></script>
     <script type="text/javascript">
      answers = {"ans1":"1", "ans2":"x^2", "ans3":"( 4+ sqrt( 16 - 4 ) )/( 2 )"};
-     questions = {"q1":"Express $$((sin(x)^2) + (cos(x)^2))$$ without using any trigonometric functions."};
+     questions = {1:"Express $$((sin(x)^2) + (cos(x)^2))$$ without using any trigonometric functions."};
      blank = "\\color{gray}{\\text{Click here to start typing your answer}}";
      check_answer = function(id){
 	 attempt = Guppy(id).asciimath();
@@ -30,7 +30,7 @@
      Guppy.use_osk(new GuppyOSK({"goto_tab":"arithmetic","attach":"focus"}));//
 	 Guppy.event("done",function(e){check_answer(e.target.editor.id)});
 	     
-	 document.getElementById("q1").innerHTML = questions['q1'];
+	 document.getElementById(1).innerHTML = questions[1];
 	     
 	 Guppy.Doc.render_all("text","$$");
 	 var g1 = new Guppy("ans1");
@@ -68,7 +68,7 @@
     <div  style="overflow-y:auto; height:33%;">
     <ul>
 	<li>
-	    <div id="q1"></div><br />
+	    <div id=1></div><br />
 	    <div id="ans1" class="answerbox"></div>
 	    <div class="button" onclick="check_answer('ans1')" id="sub1">Submit</div>
 	    <span id="ans1_feedback">Unanswered</span>
