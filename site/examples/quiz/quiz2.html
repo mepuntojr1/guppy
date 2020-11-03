@@ -66,10 +66,28 @@
 
 <body>
     <div  style="overflow-y:auto; height:33%;">
+	    <h4>Question:</h4>
+	    <div id=1></div><br>
 	    <h4>Given:</h4>
-	    <h3 id=1></h3><br>
-	    <h4>Given:</h4>
-	    <ol>
+	    <ul>
+  		<li>
+		    <div id="ans1" class="answerbox"></div>
+	    	    <div class="button" onclick="check_answer('ans1')" id="sub1">Submit</div>
+	            <span id="ans1_feedback">Unanswered</span>
+		</li>
+  		<li>
+		    <div id="ans2" class="answerbox"></div>
+	    	    <div class="button" onclick="check_answer('ans2')" id="sub2">Submit</div>
+	            <span id="ans2_feedback">Unanswered</span>
+		</li>
+  		<li>
+		    <div id="ans3" class="answerbox"></div>
+	    	    <div class="button" onclick="check_answer('ans3')" id="sub3">Submit</div>
+	            <span id="ans3_feedback">Unanswered</span>
+		</li>
+	     </ul><br>
+	     <h4>Solution:</h4>
+	     <ol>
   		<li>
 		    <div id="ans1" class="answerbox"></div>
 	    	    <div class="button" onclick="check_answer('ans1')" id="sub1">Submit</div>
@@ -86,7 +104,10 @@
 	            <span id="ans3_feedback">Unanswered</span>
 		</li>
 	     </ol><br>
-	     <h4>Solution:</h4>
+	    <h4>Answer:</h4>
+	    <div id="ans1" class="answerbox"></div>
+	    <div class="button" onclick="check_answer('ans1')" id="sub1">Submit</div>
+	    <span id="ans1_feedback">Unanswered</span>
     </div>
 </body>
 
